@@ -45,9 +45,116 @@ img {
     display: block;
 }
 
+/* ==========================================================================
+Fonts
+   ========================================================================== */
+
+/* Altform - Regular */
+@font-face {
+    font-family: 'Altform TRIAL';
+    src: url('../fonts/Altform-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Altform - Bold */
+@font-face {
+    font-family: 'Altform TRIAL';
+    src: url('../fonts/Altform-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Altform - Black */
+@font-face {
+    font-family: 'Altform TRIAL';
+    src: url('../fonts/Altform-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
 
 /* ==========================================================================
 MAIN STYLES
    ========================================================================== */
 
+:root {
+    --gray-color: #E6E6E6;
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+    --yellow-color: #EFD30B;
+    --font-family: 'Altform TRIAL';
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-black: 900;
+}
 
+body {
+    margin: 38px 55px 0px 55px;
+    height: 10000000px;
+    background-color: var(--gray-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+
+    > img {
+        width: 188px;
+        height: 42px;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+}
+
+
+
+nav ul {
+    display: flex;
+    width: 251px;
+    height: 56px;
+    padding: 16px 30px 16px 35px;
+    border-radius: 35px;
+    flex-shrink: 0;
+    gap: 50px;
+    background: var(--black-color);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+
+    >li {
+        font-family: var(--font-family);
+        font-weight: var(--fw-regular);
+        font-size: 1rem;
+        color: rgba(230, 230, 230, 0.62);
+        cursor: pointer;
+
+        :hover {
+            color: var(--white-color);
+            transition: color 0.3s ease-in-out;
+        }
+    }
+}
+
+.order-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 151px;
+    height: 56px;
+    flex-shrink: 0;
+
+    border-radius: 35px;
+    background: var(--yellow-color);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: var(--fw-bold);
+    color: var(--black-color);
+    cursor: pointer;
+}
