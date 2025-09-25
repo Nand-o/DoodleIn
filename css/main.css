@@ -285,37 +285,41 @@ header.header-inverted {
 
 /* Background Pattern About Section */
 
-.about {
+section.about {
+    /* ...properti lain yang sudah ada... */
     position: relative;
     overflow: hidden;
 }
 
 /* Lingkaran Kiri Atas */
-.about::before {
+section.about::before {
     content: '';
     position: absolute;
-
     border-radius: 50%;
     border: 2px solid var(--gray-color);
+    /* Warna dibuat sedikit lebih transparan */
 
-    width: 80rem;
-    height: 80rem;
+    /* Ganti ukuran dari rem ke vw */
+    width: 80vw;
+    height: 80vw;
 
-    top: -45rem;
-    left: -15rem;
+    /* Ganti posisi dari rem ke vw */
+    top: -55vw;
+    left: -28vw;
 }
 
 /* Lingkaran Kanan Bawah */
-.about::after {
+section.about::after {
     content: '';
     position: absolute;
-    
     border-radius: 50%;
     border: 2px solid var(--gray-color);
 
-    width: 80rem;
-    height: 80rem;
+    /* Ganti ukuran dari rem ke vw */
+    width: 80vw;
+    height: 80vw;
 
-    bottom: -45rem;
-    right: -15rem;
+    /* Ganti posisi dari rem ke vw */
+    bottom: -55vw;
+    right: -28vw;
 }
