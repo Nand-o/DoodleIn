@@ -89,7 +89,7 @@ MAIN STYLES
 }
 
 body {
-    height: 200vh;
+    height: 600vh;
     background-color: var(--gray-color);
 }
 
@@ -210,7 +210,7 @@ section.hero {
 /* Styling Section About */
 section.about {
     background-color: var(--black-color);
-    height: 100vh;
+    height: 110vh;
     display: flex;
     align-items: center;
 }
@@ -286,7 +286,6 @@ header.header-inverted {
 /* Background Pattern About Section */
 
 section.about {
-    /* ...properti lain yang sudah ada... */
     position: relative;
     overflow: hidden;
 }
@@ -297,13 +296,10 @@ section.about::before {
     position: absolute;
     border-radius: 50%;
     border: 2px solid var(--gray-color);
-    /* Warna dibuat sedikit lebih transparan */
 
-    /* Ganti ukuran dari rem ke vw */
     width: 80vw;
     height: 80vw;
 
-    /* Ganti posisi dari rem ke vw */
     top: -55vw;
     left: -28vw;
 }
@@ -315,11 +311,9 @@ section.about::after {
     border-radius: 50%;
     border: 2px solid var(--gray-color);
 
-    /* Ganti ukuran dari rem ke vw */
     width: 80vw;
     height: 80vw;
 
-    /* Ganti posisi dari rem ke vw */
     bottom: -55vw;
     right: -28vw;
 }

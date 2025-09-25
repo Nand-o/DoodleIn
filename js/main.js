@@ -5,7 +5,7 @@ const aboutSection = document.querySelector('#about-section');
 
 const observerOptions = {
     root: null,
-    threshold: 0.9 
+    threshold: 0.3 
 };
 
 const observer = new IntersectionObserver(function(entries, observer) {
