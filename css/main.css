@@ -90,7 +90,7 @@ MAIN STYLES
 }
 
 body {
-    margin: 38px 55px 0px 55px;
+    margin: 30px 55px 0px 55px;
     height: 10000000px;
     background-color: var(--gray-color);
 }
@@ -99,44 +99,41 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
 
     position: sticky;
     top: 20px;
     z-index: 100;
 
-    > img {
-        width: 188px;
-        height: 42px;
-        flex-shrink: 0;
+    >img {
+        width: 11.75rem;
+        height: 2.625rem;
         cursor: pointer;
     }
 }
 
-
-
 nav ul {
     display: flex;
-    width: 251px;
-    height: 56px;
+    width: 15.6875rem;
+    height: 3.5rem;
     padding: 16px 30px 16px 35px;
     border-radius: 35px;
     flex-shrink: 0;
     gap: 50px;
     background: var(--black-color);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
 
+.nav-link {
+    font-family: var(--font-family);
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+    color: rgba(230, 230, 230, 0.62);
+    cursor: pointer;
 
-    >li {
-        font-family: var(--font-family);
-        font-weight: var(--fw-regular);
-        font-size: 1rem;
-        color: rgba(230, 230, 230, 0.62);
-        cursor: pointer;
-
-        :hover {
-            color: var(--white-color);
-            transition: color 0.3s ease-in-out;
-        }
+    :hover {
+        color: var(--white-color);
+        transition: color 0.3s ease-in-out;
     }
 }
 
@@ -144,8 +141,8 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 151px;
-    height: 56px;
+    width: 9.4375rem;
+    height: 3.5rem;
     flex-shrink: 0;
 
     border-radius: 35px;
@@ -157,4 +154,46 @@ nav ul {
     font-weight: var(--fw-bold);
     color: var(--black-color);
     cursor: pointer;
+}
+
+.hero-section {
+    width: 100%;
+    min-height: calc(100vh - calc(30px + 30px + 3.5rem));
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hero-content {
+    flex-grow: 0.01;
+
+    display: flex;
+    gap: 2.5em;
+
+    >.wiki,
+    .tagline {
+        width: 50%;
+    }
+}
+
+.wiki p {
+    padding-top: 1.19rem;
+    width: 26.75rem;
+    flex-shrink: 0;
+
+    color: var(--black-color);
+    font-family: var(--font-family);
+    font-size: 1.125rem;
+    font-weight: var(--fw-regular);
+    line-height: normal;
+}
+
+.tagline h1 {
+    width: 42.1875rem;
+    color: var(--black-color);
+    font-family: var(--font-family);
+    font-size: calc(5.3125rem - 0rem);
+    font-weight: var(--fw-bold);
+    line-height: 4.8125rem;
 }
