@@ -98,8 +98,8 @@ main {
     flex-direction: column;
 }
 
-section#hero,
-section#about {
+section.hero,
+section.about {
     width: 100%;
     padding: 0px 55px 0px 55px;
 }
@@ -166,7 +166,7 @@ nav ul {
     cursor: pointer;
 }
 
-section#hero {
+section.hero {
     width: 100%;
     min-height: calc(100vh - calc(30px + 30px + 3.5rem) + 3.75rem);
 
@@ -208,7 +208,7 @@ section#hero {
 }
 
 /* Styling Section About */
-section#about {
+section.about {
     background-color: var(--black-color);
     height: 100vh;
     display: flex;
@@ -246,7 +246,7 @@ section#about {
         line-height: normal;
     }
 
-    > img {
+    >img {
         margin-right: 3em;
         align-self: flex-end;
     }
@@ -254,4 +254,68 @@ section#about {
 
 .about-image {
     background-color: var(--yellow-color);
+    position: relative;
+    z-index: 2;
+}
+
+/* Gaya untuk header saat di atas section gelap */
+
+header.header-inverted {
+    >.logo {
+        filter: invert(1);
+        transition: filter 0.3s ease-in-out;
+    }
+
+    >nav ul {
+        background-color: var(--white-color);
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    >nav .nav-link {
+        color: var(--black-color);
+        transition: color 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    >nav .nav-link:hover {
+        color: var(--yellow-color);
+        transition: color 0.3s ease-in-out;
+    }
+}
+
+/* Background Pattern About Section */
+
+.about {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Lingkaran Kiri Atas */
+.about::before {
+    content: '';
+    position: absolute;
+
+    border-radius: 50%;
+    border: 2px solid var(--gray-color);
+
+    width: 80rem;
+    height: 80rem;
+
+    top: -45rem;
+    left: -15rem;
+}
+
+/* Lingkaran Kanan Bawah */
+.about::after {
+    content: '';
+    position: absolute;
+    
+    border-radius: 50%;
+    border: 2px solid var(--gray-color);
+
+    width: 80rem;
+    height: 80rem;
+
+    bottom: -45rem;
+    right: -15rem;
 }
