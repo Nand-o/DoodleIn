@@ -30,10 +30,9 @@ section#service {
 }
 
 .showcase-section {
-    padding-top: 1rem;
     display: flex;
     flex-direction: column;
-    
+
     >h2 {
         margin-left: 3rem;
         color: var(--black-color);
@@ -51,7 +50,7 @@ section#service {
 }
 
 .slider-container {
-    margin-top: 3rem;
+    margin-top: 1.5vh;
     width: 100%;
     height: 70vh;
 
@@ -64,21 +63,49 @@ section#service {
 .slider-wrapper {
     width: 65%;
     background-color: var(--black-color);
-    border-radius: 1.8rem;
+    border-top-left-radius: 1.8rem;
+    border-bottom-left-radius: 1.8rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Sembunyikan bagian yang melampaui wrapper */
+    padding-left: 1.5vw;
+}
+
+.slider-wrapper.service {
+    padding-right: 1.5vw;
+    padding-left: 0;
+    justify-content: flex-end;
+
+    border-radius: 0;
+    border-top-right-radius: 1.8rem;
+    border-bottom-right-radius: 1.8rem;
+}
+
+.slider-track {
+    display: flex;
+    height: 90%;
+    gap: 1.5rem; /* Jarak antar kartu */
+}
+
+.slider-card {
+    flex-shrink: 0; /* Mencegah kartu menyusut */
+    width: 25rem;   /* Atur lebar kartu */
+    height: 100%; /* Atur tinggi kartu agar memenuhi wrapper */
+    background-color: var(--gray-color);
+    border-radius: 1rem;
 }
 
 .slider-nav {
     display: flex;
     justify-content: center;
-    gap: 2rem
-    ;
+    gap: 2rem;
     width: 12vw;
     height: 8vh;
     padding: 5px;
     border-radius: 3.125rem;
     background-color: var(--yellow-color);
-    align-self: flex-end; 
-    margin-left: 10rem;  
+    align-self: flex-end;
+    margin-left: 10rem;
 }
 
 .slider-nav.service {
