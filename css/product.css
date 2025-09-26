@@ -1,0 +1,27 @@
+:root {
+    --gray-color: #E6E6E6;
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+    --yellow-color: #EFD30B;
+    --font-family: 'Altform TRIAL';
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+body {
+    background-color: var(--white-color);
+    height: 300vh;
+}
+.nav-link {
+    margin-left: 8px;
+}
+
+main {
+    height: 260vh;
+}
+
+section.products-services {
+    height: 200vh;
+    background-color: var(--white-color);
+}
