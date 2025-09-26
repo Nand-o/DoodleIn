@@ -317,3 +317,70 @@ section.about::after {
     bottom: -55vw;
     right: -28vw;
 }
+
+/* Styling Section Products */
+section.products {
+    width: 100%;
+    height: 200vh;
+    padding: 125px 55px 0px 55px;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-banner {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: red;
+    padding-top: 8.25rem;
+    flex-shrink: 0;
+    background: url('../assets/DoodleBig-Art.svg') -0.398px -9.19px / 100.06% 102.46% no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+}
+
+.stroked-text {
+    position: relative;
+    z-index: 2;
+
+    color: var(--black-color);
+    font-family: var(--font-family);
+    font-size: min(2rem,4rem);
+    font-weight: var(--fw-bold);
+    line-height: normal;
+}
+
+.stroked-text::before {
+    content: attr(data-text);
+    /* Ambil teks dari atribut 'data-text' */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* 3. Beri stroke pada "kembaran" ini */
+    color: transparent;
+    -webkit-text-stroke-width: 1.5rem;
+    /* Buat stroke lebih tebal */
+    -webkit-text-stroke-color: var(--white-color);
+    /* Warnanya putih */
+
+    /* 4. Letakkan di belakang teks utama */
+    z-index: -1;
+}
+
+p.stroked-text {
+    font-size: 5.5rem;
+    max-width: 80.25rem;
+    text-align: center;
+}
+
+p.stroked-text::before {
+    -webkit-text-stroke-width: 2.2rem;
+}
