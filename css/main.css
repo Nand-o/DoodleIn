@@ -86,6 +86,10 @@ MAIN STYLES
     --fw-light: 300;
     --fw-regular: 400;
     --fw-bold: 700;
+
+    --card-width: 20rem;
+    --card-gap: 2rem;
+    --card-count: 6;
 }
 
 body {
@@ -326,7 +330,7 @@ section.products {
     background-color: var(--white-color);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 19vh;
 }
 
 .products-banner {
@@ -371,11 +375,112 @@ section.products {
 }
 
 p.stroked-text {
-    font-size: clamp(2rem, 1rem + 3vw, 6rem);;
+    font-size: clamp(2rem, 1rem + 3vw, 6rem);
+    ;
     max-width: 80.25rem;
     text-align: center;
 }
 
 p.stroked-text::before {
     -webkit-text-stroke-width: 2.2rem;
+}
+
+/* Styling Product Gallery */
+
+.gallery-wrapper {
+    width: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+.gallery-track {
+    display: flex;
+    gap: var(--card-gap);
+
+    width: calc(var(--card-count) * 2 * (var(--card-width) + var(--card-gap)));
+
+    animation: scroll 30s linear infinite;
+}
+
+.product-item {
+    flex-shrink: 0;
+    width: var(--card-width);
+    height: 50vh;
+    width: 20vw;
+    background-color: var(--gray-color);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card-order-button {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+
+    background-color: var(--white-color);
+    color: var(--black-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 35px;
+    font-weight: var(--fw-bold);
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.product-item:hover .card-order-button {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(var(--card-count) * -1 * (var(--card-width) + var(--card-gap))));
+    }
+}
+
+.gallery-wrapper:hover .gallery-track {
+    animation-play-state: paused;
+}
+
+.more-products-button {
+    background-color: var(--black-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    align-self: center;
+
+    width: 20vw;
+    height: 10vh;
+    border-radius: 3rem;
+
+    color: var(--white-color);
+    font-family: var(--font-family);
+    font-size: clamp(1rem, 0.5rem + 1vw, 1.5rem);
+    font-style: normal;
+    font-weight: var(--fw-regular);
+    line-height: normal;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.more-products-button:hover {
+    color: var(--yellow-color);
 }
