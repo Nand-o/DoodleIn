@@ -350,33 +350,28 @@ section.products {
 
     color: var(--black-color);
     font-family: var(--font-family);
-    font-size: min(2rem,4rem);
+    font-size: clamp(2rem, 1rem + 2vw, 5rem);
     font-weight: var(--fw-bold);
     line-height: normal;
 }
 
 .stroked-text::before {
     content: attr(data-text);
-    /* Ambil teks dari atribut 'data-text' */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 
-    /* 3. Beri stroke pada "kembaran" ini */
     color: transparent;
     -webkit-text-stroke-width: 1.5rem;
-    /* Buat stroke lebih tebal */
     -webkit-text-stroke-color: var(--white-color);
-    /* Warnanya putih */
 
-    /* 4. Letakkan di belakang teks utama */
     z-index: -1;
 }
 
 p.stroked-text {
-    font-size: 5.5rem;
+    font-size: clamp(2rem, 1rem + 3vw, 6rem);;
     max-width: 80.25rem;
     text-align: center;
 }
