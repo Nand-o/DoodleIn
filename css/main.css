@@ -103,7 +103,10 @@ main {
 }
 
 section.hero,
-section.about {
+section.about,
+section.products,
+section.motto,
+footer {
     width: 100%;
     padding: 0px 55px 0px 55px;
 }
@@ -490,14 +493,42 @@ section.motto {
     margin-top: 2vh;
     width: 100%;
     height: 60vh;
-    padding: 0px 55px 0px 55px;
-    background-color: red;
+    background-color: var(--gray-color);
+}
+
+.motto-content {
+    width: 100%;
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 3.5rem;
+    padding-top: 12vh;
+
+    gap: 3rem;
+
+    > .order-button {
+        width: 15vw;
+        height: 5vh;
+        font-size: 1.25rem;
+    }
 }
+
+.motto-text {
+    max-width: 73.75rem;
+
+
+    > h1 {
+        text-align: center;
+        color: var(--black-color);
+        font-family: var(--font-family);
+        font-size: clamp(2rem, 1rem + 2vw, 5rem);
+        font-weight: var(--fw-bold);
+        line-height: normal;
+    }
+}
+
+
 
 footer {
     width: 100%;
