@@ -13,6 +13,7 @@ body {
     background-color: var(--white-color);
     height: 300vh;
 }
+
 .nav-link {
     margin-left: 8px;
 }
@@ -21,7 +22,74 @@ main {
     height: 260vh;
 }
 
-section.products-services {
-    height: 200vh;
-    background-color: var(--white-color);
+section#product,
+section#service {
+    width: 100%;
+    height: 99.5vh;
+
+}
+
+.showcase-section {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+    >h2 {
+        margin-left: 3rem;
+        color: var(--black-color);
+        font-family: var(--font-family);
+        font-size: clamp(2.5rem, 1rem + 3vw, 6rem);
+        font-style: normal;
+        font-weight: var(--fw-bold);
+        line-height: 4.8125rem;
+    }
+}
+
+.showcase-section h2.service {
+    align-self: flex-end;
+    margin-right: 3rem;
+}
+
+.slider-container {
+    margin-top: 3rem;
+    width: 100%;
+    height: 70vh;
+
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-wrapper {
+    width: 65%;
+    background-color: var(--black-color);
+    border-radius: 1.8rem;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem
+    ;
+    width: 12vw;
+    height: 8vh;
+    padding: 5px;
+    border-radius: 3.125rem;
+    background-color: var(--yellow-color);
+    align-self: flex-end; 
+    margin-left: 10rem;  
+}
+
+.slider-nav.service {
+    margin-right: 10rem;
+}
+
+.slider-button {
+    width: 4vw;
+    height: 7vh;
+    border-radius: 50%;
+    border: 5px solid var(--black-color);
+    cursor: pointer;
+    background: transparent;
 }
