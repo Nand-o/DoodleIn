@@ -93,7 +93,7 @@ MAIN STYLES
 }
 
 body {
-    height: 600vh;
+    height: 515vh;
     background-color: var(--gray-color);
 }
 
@@ -126,7 +126,7 @@ header {
     }
 }
 
-nav ul {
+nav ul.nav-links {
     display: flex;
     width: 15.6875rem;
     height: 3.5rem;
@@ -483,4 +483,33 @@ p.stroked-text::before {
 
 .more-products-button:hover {
     color: var(--yellow-color);
+}
+
+/* Styling Motto & Footer */
+section.motto {
+    margin-top: 2vh;
+    width: 100%;
+    height: 60vh;
+    padding: 0px 55px 0px 55px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+}
+
+footer {
+    width: 100%;
+    height: 40vh;
+    padding: 0px 55px 0px 55px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: var(--fw-regular);
+    line-height: normal;
+
+    display: flex;
+    align-items: center;
 }
