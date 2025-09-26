@@ -507,7 +507,7 @@ section.motto {
 
     gap: 3rem;
 
-    > .order-button {
+    >.order-button {
         width: 15vw;
         height: 5vh;
         font-size: 1.25rem;
@@ -518,7 +518,7 @@ section.motto {
     max-width: 73.75rem;
 
 
-    > h1 {
+    >h1 {
         text-align: center;
         color: var(--black-color);
         font-family: var(--font-family);
@@ -543,4 +543,47 @@ footer {
 
     display: flex;
     align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    >p {
+        align-self: flex-end;
+        margin-bottom: 1rem;
+    }
+}
+
+.footer-nav {
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+}
+
+.footer-link,
+.social-link {
+    margin-left: 5rem;
+    color: var(--white-color);
+    font-family: var(--font-family);
+    font-size: clamp(0.875rem, 0.5rem + 0.5vw, 1.25rem);
+    font-style: normal;
+    font-weight: var(--fw-regular);
+    line-height: 2.7rem;
+    /* 160% */
+}
+
+
+
+.footer-logo {
+    filter: invert(1);
+    max-width: 35vw;
+    height: 15vh;
+    align-self: flex-end;
+
 }
