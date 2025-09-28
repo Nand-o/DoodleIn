@@ -19,14 +19,10 @@ window.addEventListener('load', () => {
         const step = cardWidth + gap;
         let currentIndex = 0;
 
-        // --- LOGIKA BARU UNTUK POSISI AWAL ---
         const isServiceSlider = slider.id === 'service-slider';
         if (isServiceSlider) {
-            // Untuk slider 'Services', kita mulai dari posisi paling kanan (akhir)
             const maxScroll = track.scrollWidth - wrapper.clientWidth;
-            // Atur transform langsung ke posisi akhir
             track.style.transform = `translateX(-${maxScroll}px)`;
-            // Index-nya adalah jumlah step maksimum
             currentIndex = Math.round(maxScroll / step);
         }
 
@@ -39,11 +35,8 @@ window.addEventListener('load', () => {
 
         function updateButtons() {
             const maxScroll = track.scrollWidth - wrapper.clientWidth;
-            // Tombol 'Prev' nonaktif jika di awal (index 0)
             prevButton.disabled = currentIndex === 0;
 
-            // Tombol 'Next' nonaktif jika sudah di akhir.
-            // Kita beri toleransi kecil (1px) untuk mengatasi pembulatan desimal.
             const endReached = (currentIndex * step) >= (maxScroll - 1);
             nextButton.disabled = endReached;
         }
@@ -63,7 +56,6 @@ window.addEventListener('load', () => {
             }
         });
 
-        // Panggil di awal untuk set kondisi tombol yang benar
         updateButtons();
     });
 });

@@ -93,7 +93,6 @@ section#service {
     width: 67%;
     padding-right: 1.5vw;
     padding-left: 0;
-    /* justify-content: flex-end; */
 
     border-radius: 0;
     border-top-right-radius: 1.8rem;
@@ -104,13 +103,13 @@ section#service {
 .slider-track {
     display: flex;
     height: 90%;
-    gap: 1.5rem; /* Jarak antar kartu */
+    gap: 1.5rem; 
 }
 
 .slider-card {
-    flex-shrink: 0; /* Mencegah kartu menyusut */
-    width: 25rem;   /* Atur lebar kartu */
-    height: 100%; /* Atur tinggi kartu agar memenuhi wrapper */
+    flex-shrink: 0;
+    width: 25rem; 
+    height: 100%; 
     background-color: var(--white-color);
     border-radius: 1rem;
 }
