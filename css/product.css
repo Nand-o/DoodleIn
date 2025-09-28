@@ -91,7 +91,7 @@ section#service {
     flex-shrink: 0; /* Mencegah kartu menyusut */
     width: 25rem;   /* Atur lebar kartu */
     height: 100%; /* Atur tinggi kartu agar memenuhi wrapper */
-    background-color: var(--gray-color);
+    background-color: var(--white-color);
     border-radius: 1rem;
 }
 
