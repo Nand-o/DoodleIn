@@ -4,8 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Products & Services | DoodleIn</title>
+        <link rel="icon" href="./assets/Icon.svg" type="image/svg+xml">
+        <link rel="icon" sizes="192x192" href="./assets/Icon.png" type="image/png">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/product.css">
+        <script src="./js/productSlider.js" defer></script>
     </head>
     <body>
         <header>
@@ -26,11 +29,11 @@
             <section id="product" class="showcase-section">
                 <h2 class="showcase-title">Products.</h2>
 
-                <div class="slider-container">
+                <div id="product-slider" class="slider-container">
                     <div class="slider-nav">
                         <button class="slider-button prev"
                             aria-label="Previous Product">
-                            <svg width="40" height="40" viewBox="0 0 24 24"
+                            <svg width="35" height="35" viewBox="0 0 24 24"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15 18L9 12L15 6" stroke="black"
                                     stroke-width="5" stroke-linecap="round"
@@ -39,7 +42,7 @@
                         </button>
                         <button class="slider-button next"
                             aria-label="Next Product">
-                            <svg width="40" height="40" viewBox="0 0 24 24"
+                            <svg width="35" height="35" viewBox="0 0 24 24"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 18L15 12L9 6" stroke="black"
                                     stroke-width="5" stroke-linecap="round"
@@ -50,11 +53,11 @@
 
                     <div class="slider-wrapper">
                         <div class="slider-track">
-                            <div class="slider-card"></div>
-                            <div class="slider-card"></div>
-                            <div class="slider-card"></div>
-                            <div class="slider-card"></div>
-                            <div class="slider-card"></div>
+                            <div class="slider-card">1</div>
+                            <div class="slider-card">2</div>
+                            <div class="slider-card">3</div>
+                            <div class="slider-card">4</div>
+                            <div class="slider-card">5</div>
                         </div>
                     </div>
                 </div>
@@ -63,21 +66,21 @@
             <section id="service" class="showcase-section">
                 <h2 class="showcase-title service">Services.</h2>
 
-                <div class="slider-container">
+                <div id="service-slider" class="slider-container">
                     <div class="slider-wrapper service">
                         <div class="slider-track">
-                            <div class="slider-card"></div>
-                            <div class="slider-card"></div>
-                            <div class="slider-card"></div>
-                            <div class="slider-card"></div>
-                            <div class="slider-card"></div>
+                            <div class="slider-card">4</div>
+                            <div class="slider-card">3</div>
+                            <div class="slider-card">2</div>
+                            <div class="slider-card">1</div>
+                            <div class="first-service"></div>
                         </div>
                     </div>
 
                     <div class="slider-nav service">
                         <button class="slider-button prev"
                             aria-label="Previous Service">
-                            <svg width="40" height="40" viewBox="0 0 24 24"
+                            <svg width="35" height="35" viewBox="0 0 24 24"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15 18L9 12L15 6" stroke="black"
                                     stroke-width="5" stroke-linecap="round"
@@ -86,7 +89,7 @@
                         </button>
                         <button class="slider-button next"
                             aria-label="Next Service">
-                            <svg width="40" height="40" viewBox="0 0 24 24"
+                            <svg width="35" height="35" viewBox="0 0 24 24"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 18L15 12L9 6" stroke="black"
                                     stroke-width="5" stroke-linecap="round"
