@@ -89,7 +89,7 @@ MAIN STYLES
 
     --card-width: 20rem;
     --card-gap: 2rem;
-    --card-count: 6;
+    --card-count: 7;
 }
 
 body {
@@ -214,6 +214,14 @@ section.hero {
     line-height: 4.8125rem;
 }
 
+.hero-image {
+    width: 25vw;
+    height: auto;
+    position: absolute;
+    bottom: -5vh;
+    left: 15vw;
+}
+
 /* Styling Section About */
 section.about {
     background-color: var(--black-color);
@@ -226,7 +234,7 @@ section.about {
     display: flex;
     flex: 1;
     height: 50vh;
-    gap: 2.5em;
+    gap: 10rem;
     background-color: var(--black-color);
 
     >.about-text {
@@ -234,7 +242,7 @@ section.about {
     }
 
     >.about-image {
-        width: 40%;
+        width: 30%;
     }
 }
 
@@ -260,9 +268,19 @@ section.about {
 }
 
 .about-image {
-    background-color: var(--yellow-color);
+    background-color: var(--white-color);
+    border-radius: 10px;
     position: relative;
     z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >img {
+        width: 23vw;
+        height: auto;
+        background-color: red;
+    }
 }
 
 /* Gaya untuk header saat di atas section gelap */
@@ -416,14 +434,30 @@ p.stroked-text::before {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 1.5rem;
 
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
+
+    padding: 80px 55px 25px 55px;
+
+    > img {
+        flex-grow: 1;
+        min-height: 0;
+        width: auto;
+        height: auto;
+        align-self: center;
+    }
+
+    > .product-desc {
+        flex-grow: 0.05;
+        color: var(--black-color);
+        font-family: var(--font-family);
+        font-size: clamp(0.75rem, 0.5vw, 1.5rem);
+
+    }
 }
 
 .card-order-button {
@@ -434,6 +468,7 @@ p.stroked-text::before {
 
     background-color: var(--white-color);
     color: var(--black-color);
+    font-family: var(--font-family);
     padding: 0.75rem 1.5rem;
     border-radius: 35px;
     font-weight: var(--fw-bold);
