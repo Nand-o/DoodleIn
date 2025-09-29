@@ -396,9 +396,9 @@ section.products {
 }
 
 p.stroked-text {
-    font-size: clamp(2rem, 1rem + 3vw, 6rem);
+    font-size: clamp(2rem, 1rem + 2vw, 6rem);
     ;
-    max-width: 80.25rem;
+    max-width: 50.25rem;
     text-align: center;
 }
 
